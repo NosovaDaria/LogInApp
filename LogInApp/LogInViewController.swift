@@ -8,12 +8,16 @@
 import UIKit
 
 class LogInViewController: UIViewController {
+    
+    // MARK: - IB OUTLETS
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    // MARK: - Private Properties
     private let name = "User"
     private let password = "Password"
     
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +34,7 @@ class LogInViewController: UIViewController {
         passwordTextField.endEditing(true)
     }
 
+    // MARK: IB Actions
     @IBAction func logInButton(_ sender: UIButton) {
         if userNameTextField.text != name || passwordTextField.text != password{
             showAlert(title: "Oops!", message: "Wrong username or password:(")
