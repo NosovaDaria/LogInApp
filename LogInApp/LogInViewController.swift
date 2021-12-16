@@ -27,7 +27,7 @@ class LogInViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeScreenVC = segue.destination as! WelcomeScreenViewController
-        welcomeScreenVC.welcomeMessage = "Hello \(name)!)"
+        welcomeScreenVC.welcomeMessage = "Hello \(name)!"
         
     }
     
@@ -43,6 +43,8 @@ class LogInViewController: UIViewController {
             showAlert(title: "Oops!", message: "Wrong username or password:(")
             cleanTextField()
             return
+        } else {
+            performSegue(withIdentifier: "showWelcomeScreenVC", sender: nil)
         }
     }
 
