@@ -24,10 +24,13 @@ class LogInViewController: UIViewController {
         userNameTextField.layer.cornerRadius = 10
         passwordTextField.layer.cornerRadius = 10
   }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeScreenVC = segue.destination as! WelcomeScreenViewController
-        welcomeScreenVC.welcomeMessage = "Hello \(String(describing: name))"
+        welcomeScreenVC.welcomeMessage = "Hello \(name)!)"
+        
     }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         userNameTextField.endEditing(true)
@@ -38,6 +41,7 @@ class LogInViewController: UIViewController {
     @IBAction func logInButton(_ sender: UIButton) {
         if userNameTextField.text != name || passwordTextField.text != password{
             showAlert(title: "Oops!", message: "Wrong username or password:(")
+            cleanTextField()
             return
         }
     }
@@ -53,6 +57,11 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
+        cleanTextField()
+    }
+    
+    // MARK: Private Methods
+    private func cleanTextField() {
         userNameTextField.text = nil
         passwordTextField.text = nil
     }
