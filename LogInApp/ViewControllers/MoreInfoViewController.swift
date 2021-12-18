@@ -13,9 +13,18 @@ class MoreInfoViewController: UIViewController {
     @IBOutlet var tvSeriesLabel: UILabel!
     @IBOutlet var favoritDishesLabel: UILabel!
     
+    var hobbies = ""
+    var films = ""
+    var tvSeries = ""
+    var dishes = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hobbiesLabel.text = hobbies
+        filmsLabel.text = films
+        tvSeriesLabel.text = tvSeries
+        favoritDishesLabel.text = dishes
     }
     
 

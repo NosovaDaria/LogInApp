@@ -11,6 +11,7 @@ class AboutMeViewController: UIViewController {
 
     @IBOutlet var fullNameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
+    @IBOutlet var photo: UIImageView!
     
     var fullName = ""
     var age = ""

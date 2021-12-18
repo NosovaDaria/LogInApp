@@ -8,7 +8,8 @@
 import Foundation
 
 struct Person {
-    let fullName: String
+    let name: String
+    let surname: String
     let age: String
     let hobbies: String
     let favoriteFilms: String
@@ -17,7 +18,8 @@ struct Person {
     
     static func getPerson() -> Person {
             Person(
-                fullName: "Daria Nosova",
+                name: "Daria",
+                surname: "Nosova",
                 age: "31 years",
                 hobbies: "Travel, photography, reading and learning English",
                 favoriteFilms: "Blade Runner, Matrix, Dune",
