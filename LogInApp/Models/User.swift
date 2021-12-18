@@ -8,10 +8,13 @@
 import Foundation
 
 struct User {
+    // MARK: - Public Properties
+    
     let username: String
     let password: String
     let person: Person
     
+    // MARK: - Public Methods
     static func getUser() -> User {
             User(
                 username: "User",
