@@ -30,16 +30,10 @@ class LogInViewController: UIViewController {
         
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.fullName = user.person.name + " " + user.person.surname
+                welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
-                aboutUserVC.fullName = user.person.name + " " + user.person.surname
-                aboutUserVC.age = user.person.age
-            } else if let moreInfoVC = segue.destination as? MoreInfoViewController {
-                moreInfoVC.hobbies = user.person.hobbies
-                moreInfoVC.films = user.person.favoriteFilms
-                moreInfoVC.tvSeries = user.person.favoriteTVSeries
-                moreInfoVC.dishes = user.person.favoriteDishes
+                aboutUserVC.user = user
             }
         }
     }
