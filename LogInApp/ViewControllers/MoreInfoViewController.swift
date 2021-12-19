@@ -31,6 +31,7 @@ class MoreInfoViewController: UIViewController {
         filmsLabel.text = films
         tvSeriesLabel.text = tvSeries
         favoritDishesLabel.text = dishes
+        
     }
 
 }

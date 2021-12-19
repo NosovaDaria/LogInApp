@@ -9,7 +9,6 @@ import Foundation
 
 struct Person {
     
-    // MARK: - Public Properties
     let name: String
     let surname: String
     let age: String
@@ -18,15 +17,14 @@ struct Person {
     let favoriteTVSeries: String
     let favoriteDishes: String
     
-    //MARK: - Public Methods
     static func getPerson() -> Person {
             Person(
                 name: "Daria",
                 surname: "Nosova",
                 age: "31 years",
-                hobbies: "Travel, photography, reading and learning English",
+                hobbies: "Travel, photography, reading, learning English",
                 favoriteFilms: "Blade Runner, Matrix, Dune",
-                favoriteTVSeries: "Breacking Bad, The Office, Sherlock, Black mirror",
+                favoriteTVSeries: "Breacking Bad, The Office, Sherlock, Black mirror, Twin Peaks",
                 favoriteDishes: "Greek salad, Grilled octopus, Tom Yam"
             )
     }

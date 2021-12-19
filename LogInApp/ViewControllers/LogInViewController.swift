@@ -33,11 +33,11 @@ class LogInViewController: UIViewController {
                 welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
+                UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.9011577964, green: 0.3819978237, blue: 0.3516694903, alpha: 1)
                 aboutUserVC.user = user
             }
         }
     }
-    
 
     // MARK: IB Actions
     @IBAction func logInButton(_ sender: UIButton) {
@@ -52,8 +52,8 @@ class LogInViewController: UIViewController {
 
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your username is \(user.username) 😉")
-        : showAlert(title: "Oops!", message: "Your password is \(user.password) 😉")
+        ? showAlert(title: "Oops!", message: "Your username is \(user.username) 😏")
+        : showAlert(title: "Oops!", message: "Your password is \(user.password) 😏")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -61,6 +61,7 @@ class LogInViewController: UIViewController {
         passwordTextField.text = nil
     }
 }
+
 // MARK: - Private Methods
 extension LogInViewController {
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
@@ -72,6 +73,7 @@ extension LogInViewController {
         present(messageAlert, animated: true)
     }
 }
+
 extension LogInViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
