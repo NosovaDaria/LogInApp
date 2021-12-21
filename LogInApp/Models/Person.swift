@@ -16,6 +16,7 @@ struct Person {
     let favoriteFilms: String
     let favoriteTVSeries: String
     let favoriteDishes: String
+    let image: String
     
     static func getPerson() -> Person {
             Person(
@@ -25,7 +26,9 @@ struct Person {
                 hobbies: "Travel, photography, reading, learning English",
                 favoriteFilms: "Blade Runner, Matrix, Dune",
                 favoriteTVSeries: "Breacking Bad, The Office, Sherlock, Black mirror, Twin Peaks",
-                favoriteDishes: "Greek salad, Grilled octopus, Tom Yam"
+                favoriteDishes: "Greek salad, Grilled octopus, Tom Yam",
+                image: "photo_2021-12-18_13-21-10"
+                
             )
     }
 }

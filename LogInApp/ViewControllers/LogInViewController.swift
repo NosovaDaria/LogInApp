@@ -26,12 +26,12 @@ class LogInViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
-        let viewControllers = tabBarController.viewControllers!
+        guard let viewControllers = tabBarController.viewControllers else { return }
         
-        for viewController in viewControllers {
-            if let welcomeVC = viewController as? WelcomeViewController {
+        viewControllers.forEach {
+            if let welcomeVC = $0 as? WelcomeViewController {
                 welcomeVC.user = user
-            } else if let navigationVC = viewController as? UINavigationController {
+            } else if let navigationVC = $0 as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
                 UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.9011577964, green: 0.3819978237, blue: 0.3516694903, alpha: 1)
                 aboutUserVC.user = user
