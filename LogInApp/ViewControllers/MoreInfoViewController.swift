@@ -15,17 +15,17 @@ class MoreInfoViewController: UIViewController {
     @IBOutlet var tvSeriesLabel: UILabel!
     @IBOutlet var favoritDishesLabel: UILabel!
     
-    var user: User?
+    var user: User!
     
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let hobbies = user?.person.hobbies
-        let films = user?.person.favoriteFilms
-        let tvSeries = user?.person.favoriteTVSeries
-        let dishes = user?.person.favoriteDishes
+        let hobbies = user.person.hobbies
+        let films = user.person.favoriteFilms
+        let tvSeries = user.person.favoriteTVSeries
+        let dishes = user.person.favoriteDishes
         
         hobbiesLabel.text = hobbies
         filmsLabel.text = films

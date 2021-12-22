@@ -13,14 +13,14 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var welcomeMessageLabel: UILabel!
     
     // MARK: - Public Properties
-    var user: User?
+    var user: User!
     
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let name = user?.person.name ?? ""
-        let surname = user?.person.surname ?? ""
+        let name = user.person.name
+        let surname = user.person.surname
         
         welcomeMessageLabel.text = "Welcome, \(name) \(surname)!"
     }

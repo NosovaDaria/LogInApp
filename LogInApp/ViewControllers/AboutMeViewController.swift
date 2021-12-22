@@ -14,17 +14,17 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var ageLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     // MARK: - Public Properties
-    var user: User?
+    var user: User!
 
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let name = user?.person.name ?? ""
-        let surname = user?.person.surname ?? ""
-        let age = user?.person.age ?? ""
+        let name = user.person.name
+        let surname = user.person.surname
+        let age = user.person.age
         
-        imageView.image = UIImage(named: user?.person.image ?? "")
+        imageView.image = UIImage(named: user.person.image)
         imageView.layer.cornerRadius = imageView.bounds.width/2
         fullNameLabel.text = name + " " + surname
         ageLabel.text = age
