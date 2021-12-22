@@ -33,8 +33,8 @@ class LogInViewController: UIViewController {
                 welcomeVC.user = user
             } else if let navigationVC = $0 as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
-                aboutUserVC.user = user
                 UINavigationBar.appearance().tintColor = #colorLiteral(red: 0.9011577964, green: 0.3819978237, blue: 0.3516694903, alpha: 1)
+                aboutUserVC.user = user
             }
         }
     }
